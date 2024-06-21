@@ -15,7 +15,7 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: apiClient.getAll, //Since we are not passing parameters to the API, we can use the getAll method directly.
     staleTime: 1000 * 60 * 60 * 24, // 24 hours
-    initialData: { count: genres.length, results: genres },
+    initialData: genres,
   });
 
 export default useGenres;
